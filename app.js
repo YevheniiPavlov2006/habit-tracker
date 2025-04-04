@@ -75,10 +75,12 @@ function createHabitCard(nameValue, colorValue, completedDays = []) {
 addBtn.addEventListener('click', function () {
   const createCard = document.querySelector('.create-card-block');
   createCard.style.top = '0';
+  createCard.style.zIndex = '100';
 
   const btnCreate = document.querySelector('.create-habit');
   btnCreate.addEventListener('click', () => {
-    createCard.style.top = '-100%';
+    createCard.style.top = '-170%';
+    createCard.style.zIndex = '0';
 
     const name = document.querySelector('.card-name-input');
     const color = document.querySelector('.card-color-input');
