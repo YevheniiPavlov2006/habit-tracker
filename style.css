@@ -219,7 +219,8 @@ h1 {
   align-items: center;
 }
 .day-active{
-  background-color: var(--black-1000);
+  background-color: var(--gray-text);
+  color: var(--black-800);
 }
 
 
