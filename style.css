@@ -241,7 +241,7 @@ h1 {
 
 .create-card-block {
   position: fixed;
-  top: -100%;
+  top: -170%;
   width: 100%;
   max-width: 450px;
   margin: 0 auto;
