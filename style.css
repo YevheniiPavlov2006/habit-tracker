@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Dancing+Script:wght@400..700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  --black-1000: #1b1c22;
+  --black-900: #1f2833;
+  --black-800: #141e2a;
+  --white-1000: #ffffff;
+  --blue-primary: #66fcf1;
+  --gray-text: #d7d7d7;
+}
+
+*{   
+  margin: 0;   
+  padding: 0;   
+  box-sizing: border-box;   
+}   
+   
+html,   
+body{   
+  width: 100%;   
+  height: 1px;   
+  min-height: 100%;   
+  font-family: Winky Sans; 
+  background-color: var(--black-900);
+}   
+   
+.wrapper{   
+  overflow: hidden;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto; 
+  cursor: default; 
+  background-color: var(--black-900); 
+}
+
+.congratulation-text {
+  color: var(--white-1000);
+  padding: 10px 24px;
+  box-shadow: 0 0 5px 0px var(--white-1000);
+  border: 1px solid var(--white-1000);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  background-color: var(--black-900);
+}
+@keyframes congrShow {
+  0%{top: -150px;}
+  30%{top: 30px;}
+  50%{top: 30px;}
+  70%{top: 30px;}
+  100%{top: -150px;}
+}
+.congratulation {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  
+  position: fixed;
+  top: -150px;
+  left: 0;
+  z-index: 100;
+}
+
+.congr-show-active {
+  animation-name: congrShow;
+  animation-duration: 3s;
+}
+
+.preview {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 100%;
+  padding: 20px 40px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  color: var(--black-900);
+  opacity: 1;
+  transition: 0.5s;
+}
+.preview-img {
+  background-color: var(--black-900);
+  width: 280px;
+}
+.preview-text {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+.preview-title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+
+button{
+  cursor: pointer;
+}
+
+.content {
+  width: 100%;
+  background-color: var(--black-900);
+}
+h1 {
+  letter-spacing: 1.4px;
+  font-size: 24px;
+  color: var(--white-1000);
+}
+.header-block {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 450px;
+  padding: 0 15px;
+  background-color: var(--black-900);
+  z-index: 50;
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.add-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  opacity: 0.8;
+  color: var(--white-1000);
+}
+.main-block-header {
+  width: 100%;
+  padding: 30px 10px;
+  background-color: var(--black-1000);
+  border-radius: 15px;
+  color: var(--white-1000);
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/*----------------------------------------*/
+
+.empty-message {
+  text-align: center;
+  margin-top: 15px;
+  color: var(--white-1000);
+}
+
+
+.main-block {
+  width: 100%;
+  padding: 180px 15px 60px 15px;
+}
+.main-block-body {
+  width: 100%;
+  padding: 0 15px 0 0;
+}
+.habit-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.habit-card-header {
+  display: flex;
+  justify-content: start;
+  gap: 15px;
+  align-items: center;
+  position: relative;
+  margin-bottom: 5px;
+}
+.habit-card-header img{
+  position: absolute;
+  right: 0;
+  width: 20px;
+  cursor: pointer;
+  color: var(--white-1000);
+}
+.habit-card-logo {
+  width: 45px;
+  height: 45px;
+  background-color: red;
+  color: var(--white-1000);
+  border-radius: 15px;
+  background-position: center;
+  background-size: cover;
+}
+.habit-card-name {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--white-1000);
+}
+
+.habit-card-calendar {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  column-gap: 5px;
+  row-gap: 5px;
+}
+.calendar-day {
+  border-radius: 50%;
+  border: 1px solid var(--white-1000);
+  color: var(--gray-text);
+  aspect-ratio: 1;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.day-active{
+  background-color: var(--black-1000);
+}
+
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 450px;
+  background-color: var(--black-1000);
+  text-align: center;
+  color: var(--white-1000);
+  border-radius: 5px 5px 0 0;
+  padding: 10px 0;
+  letter-spacing: 1.4px;
+}
+
+
+
+.create-card-block {
+  position: fixed;
+  top: -100%;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--black-900);
+  height: 100vh;
+  transition: 1s;
+}
+.create-habit {
+  margin-top: 20px;
+  width: 200px;
+  padding: 8px 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--white-1000);
+  color: var(--black-800);
+  font-weight: 700;
+  font-size: 15px;
+}
+.card-color-input, .card-name-input {
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid gray;
+  height: 30px;
+  width: 200px;
+  padding-left: 5px;
+  margin-top: 3px;
+}
+.card-create-text {
+  color: var(--white-1000);
+}

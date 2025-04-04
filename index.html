@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your habits</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <div class="preview">
+        <div class="preview-title">Habit tracker</div>
+        <img class="preview-img" src="img/preview.svg" alt="">
+        <div class="preview-text">Create a habit in 21 days</div>
+      </div>
+      <div class="congratulation"><div class="congratulation-text">Congratulation</div></div>
+      <div class="create-card-block">
+        <div class="card-name-panel">
+          <div class="card-create-text">Habit name:</div>
+          <input class="card-name-input" type="text">
+        </div>
+        <div class="card-color-panel">
+          <div class="card-create-text"> Habit color:</div>
+          <input class="card-color-input" type="text">
+        </div>
+        <button class="create-habit">Create habit</button>
+      </div>
+      <div class="header-block">
+        <div class="header">
+          <h1>My challenges</h1>
+          <button class="add-btn">&#128930;</button>
+        </div>
+        <div class="main-block-header">Just do it</div>
+      </div>
+      <div class="main-block">
+        <div class="main-block-body" id="habits">
+        </div>
+      </div>
+      <footer class="footer">
+        Habit tracker
+      </footer>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
